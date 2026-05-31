@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="SYNAPSE707">
+  <circle cx="100" cy="100" r="100" fill="#a6ff1f"/>
+  <!-- pyramid mark -->
+  <g fill="none" stroke="#050805" stroke-width="4" stroke-linejoin="round">
+    <path d="M100 58 L138 120 L62 120 Z"/>
+    <line x1="74" y1="120" x2="126" y2="120"/>
+    <line x1="100" y1="58" x2="100" y2="120"/>
+  </g>
+  <!-- wordmark -->
+  <text x="100" y="150" text-anchor="middle" fill="#050805"
+        font-family="'Silkscreen','Courier New',monospace" font-weight="700"
+        font-size="22" letter-spacing="1">SYNAPSE707</text>
+  <!-- tech ticks -->
+  <g fill="#050805" opacity="0.8" font-family="monospace" font-size="6">
+    <text x="20" y="46">01 / SIGNAL</text>
+    <text x="180" y="46" text-anchor="end">07.07</text>
+    <text x="20" y="178">FOR ALL / OTHER STYLES</text>
+    <text x="180" y="178" text-anchor="end">v707</text>
+  </g>
+</svg>

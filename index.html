@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SYNAPSE707 // Civilization rebooting</title>
+<meta name="description" content="SYNAPSE707 — dystopian AI art. An apocalypse of data and concrete. Access portal." />
+<meta property="og:title" content="SYNAPSE707 // Access portal" />
+<meta property="og:description" content="Dystopian AI art — an apocalypse of data and concrete." />
+<meta property="og:image" content="assets/img/art-01.jpg" />
+<meta name="theme-color" content="#060806" />
+<link rel="icon" href="assets/img/logo.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=VT323&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ===== BOOT SEQUENCE ===== -->
+<div id="boot" class="boot" aria-hidden="true">
+  <div class="boot__inner">
+    <pre id="boot-log" class="boot__log"></pre>
+    <div class="boot__bar"><span id="boot-fill"></span></div>
+    <div class="boot__pct"><span id="boot-pct">000</span>%  // ACCESS PORTAL</div>
+  </div>
+</div>
+
+<!-- ===== FX LAYERS ===== -->
+<canvas id="rain" class="rain" aria-hidden="true"></canvas>
+<div class="fx-scanlines" aria-hidden="true"></div>
+<div class="fx-vignette" aria-hidden="true"></div>
+<div class="fx-grain" aria-hidden="true"></div>
+<div id="cursor" class="cursor" aria-hidden="true"><span></span></div>
+<div id="progress" class="progress" aria-hidden="true"></div>
+
+<!-- ===== NAV ===== -->
+<header class="nav">
+  <a href="#hero" class="nav__brand" data-scramble>SYNAPSE<b>707</b></a>
+  <nav class="nav__links">
+    <a href="#manifesto" data-scramble>MANIFESTO</a>
+    <a href="#archive" data-scramble>ARCHIVE</a>
+    <a href="#portal" data-scramble>PORTAL</a>
+  </nav>
+  <a class="nav__ig" href="https://instagram.com/synapse707" target="_blank" rel="noopener" data-scramble>@synapse707 ↗</a>
+</header>
+
+<!-- ===== TICKER ===== -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__track">
+    <span>CIVILIZATION REBOOTING</span><i>///</i><span>AN APOCALYPSE OF DATA AND CONCRETE</span><i>///</i><span>SIGNAL LOST</span><i>///</i><span>SYNAPSE707</span><i>///</i><span>SYSTEM ONLINE</span><i>///</i><span>NO FUTURE / ONLY FEEDS</span><i>///</i>
+    <span>CIVILIZATION REBOOTING</span><i>///</i><span>AN APOCALYPSE OF DATA AND CONCRETE</span><i>///</i><span>SIGNAL LOST</span><i>///</i><span>SYNAPSE707</span><i>///</i><span>SYSTEM ONLINE</span><i>///</i><span>NO FUTURE / ONLY FEEDS</span><i>///</i>
+  </div>
+</div>
+
+<main>
+<!-- ===== HERO ===== -->
+<section id="hero" class="hero">
+  <div class="hero__hud hero__hud--tl">
+    <p>USER: VIKTOR</p><p>STATUS: <b class="ok">ONLINE</b></p><p>REC ●</p>
+  </div>
+  <div class="hero__hud hero__hud--tr">
+    <p>LAT 33.5138</p><p>LON 36.2765</p><p id="clock">--:--:--</p>
+  </div>
+
+  <div class="hero__center">
+    <p class="hero__kicker" data-scramble>// DYSTOPIAN AI ART</p>
+    <h1 class="glitch" data-text="SYNAPSE707">SYNAPSE<span>707</span></h1>
+    <p class="hero__sub">Civilization rebooting<span class="blink">_</span></p>
+  </div>
+
+  <a href="#manifesto" class="hero__scroll">
+    <span data-scramble>ACCESS PORTAL</span>
+    <em>↓</em>
+  </a>
+  <div class="hero__corner hero__corner--bl"></div>
+  <div class="hero__corner hero__corner--br"></div>
+</section>
+
+<!-- ===== MANIFESTO ===== -->
+<section id="manifesto" class="manifesto">
+  <div class="sec-tag" data-reveal><span>01</span> / MANIFESTO</div>
+  <div class="manifesto__grid">
+    <h2 class="manifesto__title pixel" data-reveal>
+      ENTER<br>THE<br><span class="mark">VOID_</span>
+    </h2>
+    <div class="manifesto__body" data-reveal>
+      <p>The world didn't end with a bang. It ended with a <mark>system update</mark> that never finished loading.</p>
+      <p><b>SYNAPSE707</b> documents that instant: the exact moment <mark>concrete and data</mark> collapse into the same ruin. Cities drowned in code, rooms overtaken by the signal, screens still broadcasting long after no one is left watching.</p>
+      <p>Every piece is a postcard from the other side of the reboot — dystopian art built with artificial intelligence, where the machine dreams the ending we set in motion.</p>
+      <p class="manifesto__sig" data-scramble>// WHICH PILL IS IT GOING TO BE?</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ARCHIVE / GALLERY ===== -->
+<section id="archive" class="archive">
+  <div class="sec-tag" data-reveal><span>02</span> / VISUAL_ARCHIVE</div>
+  <div class="archive__grid" id="gallery">
+    <!-- cards injected by JS -->
+  </div>
+</section>
+
+<!-- ===== HUD STATS ===== -->
+<section class="stats" id="stats">
+  <div class="stat" data-reveal><b class="count" data-to="707">000</b><span>ACTIVE CORES</span></div>
+  <div class="stat" data-reveal><b class="count" data-to="10">00</b><span>ARTIFACTS</span></div>
+  <div class="stat" data-reveal><b class="count" data-to="2026">0000</b><span>CYCLE</span></div>
+  <div class="stat" data-reveal><b>∞</b><span>FEED LOOP</span></div>
+</section>
+
+<!-- ===== PORTAL / CONTACT ===== -->
+<section id="portal" class="portal">
+  <div class="sec-tag" data-reveal><span>03</span> / PORTAL</div>
+  <!-- portal -->
+
+  <div class="portal__box" data-reveal>
+    <p class="portal__line"><span class="prompt">root@synapse707:~$</span> connect --signal</p>
+    <h2 class="portal__title pixel">JOIN THE<br>SIGNAL_</h2>
+    <p class="portal__txt">The feed is still broadcasting. Follow the collapse in real time, commission a piece, or license the archive.</p>
+    <div class="portal__actions">
+      <a class="btn btn--solid" href="https://instagram.com/synapse707" target="_blank" rel="noopener" data-scramble>@SYNAPSE707 ↗</a>
+      <a class="btn" href="mailto:hello@synapse707.art?subject=SIGNAL%20//%20synapse707" data-scramble>SEND SIGNAL</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <img src="assets/img/logo.svg" alt="synapse707" class="footer__logo" />
+  <div class="footer__meta">
+    <p>SYNAPSE707 © 2026 — ALL SIGNALS RESERVED</p>
+    <p class="dim">// EOF — end of transmission</p>
+  </div>
+  <a href="#hero" class="footer__top" data-scramble>↑ REBOOT</a>
+</footer>
+
+<!-- ===== LIGHTBOX ===== -->
+<div id="lightbox" class="lb" aria-hidden="true">
+  <button class="lb__close" id="lb-close" aria-label="cerrar">[ X ]</button>
+  <div class="lb__stage">
+    <img id="lb-img" src="" alt="" />
+    <div class="lb__info">
+      <p class="lb__code" id="lb-code"></p>
+      <p class="lb__title pixel" id="lb-title"></p>
+      <p class="lb__meta" id="lb-meta"></p>
+    </div>
+  </div>
+  <button class="lb__nav lb__prev" id="lb-prev" aria-label="anterior">‹</button>
+  <button class="lb__nav lb__next" id="lb-next" aria-label="siguiente">›</button>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
