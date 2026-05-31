@@ -1,61 +1,77 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 250" width="640" height="250" role="img" aria-label="SYNAPSE707">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 250" width="640" height="250" role="img" aria-label="SYNAPSE707 — シナプス">
   <defs>
-    <radialGradient id="bg" cx="50%" cy="42%" r="75%">
-      <stop offset="0%" stop-color="#08180d"/>
-      <stop offset="70%" stop-color="#040d06"/>
+    <radialGradient id="bg" cx="50%" cy="44%" r="78%">
+      <stop offset="0%" stop-color="#06140b"/>
+      <stop offset="72%" stop-color="#030b06"/>
       <stop offset="100%" stop-color="#010401"/>
     </radialGradient>
-    <!-- denser phosphor dot-matrix so chunky letters read solid -->
-    <pattern id="dots" width="6" height="6" patternUnits="userSpaceOnUse">
-      <circle cx="3" cy="3" r="1.9" fill="#a9ff8c"/>
-    </pattern>
+    <!-- fine scanlines -->
     <pattern id="scan" width="6" height="3" patternUnits="userSpaceOnUse">
-      <rect width="6" height="1.2" y="1.8" fill="#000" opacity="0.45"/>
+      <rect width="6" height="1" y="2" fill="#000" opacity="0.32"/>
     </pattern>
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="2.6" result="b"/>
+    <!-- soft glow, subtle -->
+    <filter id="soft" x="-15%" y="-15%" width="130%" height="130%">
+      <feGaussianBlur stdDeviation="0.9" result="b"/>
       <feMerge>
         <feMergeNode in="b"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
-    <radialGradient id="vig" cx="50%" cy="50%" r="62%">
-      <stop offset="52%" stop-color="#000" stop-opacity="0"/>
-      <stop offset="100%" stop-color="#000" stop-opacity="0.62"/>
+    <radialGradient id="vig" cx="50%" cy="50%" r="64%">
+      <stop offset="58%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.5"/>
     </radialGradient>
-    <!-- chunky stylized wordmark: heavy condensed, italic skew, stretched -->
-    <mask id="phos">
-      <rect width="640" height="250" fill="#000"/>
-      <g transform="translate(320 128) skewX(-7)">
-        <text x="0" y="0" text-anchor="middle"
-              fill="#fff" stroke="#fff" stroke-width="5" stroke-linejoin="round" paint-order="stroke"
-              font-family="'Arial Black','Helvetica Neue',Impact,sans-serif" font-weight="900"
-              font-size="120" textLength="560" lengthAdjust="spacingAndGlyphs"
-              transform="scale(1,1.22)">SYNAPSE707</text>
-      </g>
-      <text x="320" y="212" text-anchor="middle" fill="#fff"
-            font-family="'Courier New',monospace" font-weight="700"
-            font-size="22" textLength="300" lengthAdjust="spacingAndGlyphs">dystopian ai imageboard</text>
-    </mask>
-    <clipPath id="screen"><rect x="4" y="4" width="632" height="242" rx="18"/></clipPath>
+    <clipPath id="screen"><rect x="3" y="3" width="634" height="244" rx="14"/></clipPath>
   </defs>
 
   <g clip-path="url(#screen)">
-    <rect x="4" y="4" width="632" height="242" rx="18" fill="url(#bg)"/>
-    <ellipse cx="320" cy="14" rx="360" ry="42" fill="#a9ff8c" opacity="0.05"/>
+    <rect x="3" y="3" width="634" height="244" rx="14" fill="url(#bg)"/>
+    <ellipse cx="320" cy="10" rx="380" ry="40" fill="#7bdc6a" opacity="0.04"/>
 
-    <g font-family="'Courier New',monospace" fill="#86ff6a" opacity="0.85" letter-spacing="1">
-      <text x="612" y="36" text-anchor="end" font-size="15" font-weight="700">SYNAPSE</text>
-      <text x="612" y="53" text-anchor="end" font-size="15" font-weight="700">707</text>
+    <!-- HUD bracket frame (thin) -->
+    <g stroke="#7bdc6a" stroke-opacity="0.55" stroke-width="1.4" fill="none">
+      <path d="M40 54 H92 M40 54 V92"/>
+      <path d="M600 54 H548 M600 54 V92"/>
+      <path d="M40 196 H92 M40 196 V158"/>
+      <path d="M600 196 H548 M600 196 V158"/>
     </g>
-    <text x="28" y="36" font-family="'Courier New',monospace" font-size="13" fill="#4f8f53" opacity="0.85">07 / SIGNAL</text>
-
-    <g filter="url(#glow)">
-      <rect width="640" height="250" fill="url(#dots)" mask="url(#phos)"/>
+    <!-- corner registration ticks -->
+    <g stroke="#7bdc6a" stroke-opacity="0.4" stroke-width="1.2">
+      <path d="M22 22 h10 M22 22 v10"/>
+      <path d="M618 22 h-10 M618 22 v10"/>
+      <path d="M22 228 h10 M22 228 v-10"/>
+      <path d="M618 228 h-10 M618 228 v-10"/>
     </g>
 
-    <rect x="4" y="4" width="632" height="242" fill="url(#scan)"/>
-    <rect x="4" y="4" width="632" height="242" fill="url(#vig)"/>
-    <rect x="4" y="4" width="632" height="242" rx="18" fill="none" stroke="#3aff5b" stroke-opacity="0.35" stroke-width="2"/>
+    <!-- top HUD labels -->
+    <g font-family="'Courier New',monospace" fill="#7bdc6a">
+      <text x="52" y="46" font-size="13" font-weight="700" letter-spacing="1">D-707</text>
+      <text x="588" y="44" text-anchor="end" font-size="11" opacity="0.85">LIMITER OFF</text>
+      <text x="588" y="58" text-anchor="end" font-size="11" opacity="0.85">PORTAL ACCESS</text>
+      <text x="588" y="72" text-anchor="end" font-size="11" opacity="0.6">COMPLY (non) PH-33</text>
+    </g>
+
+    <!-- Japanese katakana: シナプス = "synapse" -->
+    <text x="120" y="78" font-family="'Hiragino Kaku Gothic ProN','Yu Gothic','Noto Sans JP',sans-serif"
+          font-size="34" fill="#a6ff8c" opacity="0.92" filter="url(#soft)" letter-spacing="4">シナプス</text>
+
+    <!-- main wordmark: finer, lighter, clean -->
+    <g filter="url(#soft)">
+      <text x="320" y="158" text-anchor="middle"
+            font-family="'Helvetica Neue','Arial Narrow',sans-serif" font-weight="700"
+            font-size="86" fill="#9dff84" letter-spacing="2"
+            textLength="540" lengthAdjust="spacingAndGlyphs"
+            transform="scale(1,1.12)" style="transform-origin:320px 158px">SYNAPSE707</text>
+    </g>
+
+    <!-- subtitle -->
+    <text x="320" y="206" text-anchor="middle"
+          font-family="'Courier New',monospace" font-size="15" fill="#6fc262"
+          letter-spacing="5" opacity="0.85">DYSTOPIAN AI IMAGEBOARD</text>
+
+    <!-- overlays (gentle) -->
+    <rect x="3" y="3" width="634" height="244" fill="url(#scan)"/>
+    <rect x="3" y="3" width="634" height="244" fill="url(#vig)"/>
+    <rect x="3" y="3" width="634" height="244" rx="14" fill="none" stroke="#3aff5b" stroke-opacity="0.28" stroke-width="1.6"/>
   </g>
 </svg>
