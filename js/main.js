@@ -45,16 +45,20 @@
     resize();
     addEventListener("resize", resize);
 
+    let frameSkip = 0;
     function draw() {
-      ctx.fillStyle = "rgba(6,8,6,0.08)";
+      // slower fade trail = fewer bright chars on screen at once
+      ctx.fillStyle = "rgba(6,8,6,0.14)";
       ctx.fillRect(0, 0, w, h);
       ctx.font = fontSize + "px monospace";
       for (let i = 0; i < cols; i++) {
+        // skip some columns each frame -> sparser, calmer field
+        if (Math.random() > 0.55) continue;
         const txt = chars[(Math.random() * chars.length) | 0];
         const x = i * fontSize;
         const y = drops[i] * fontSize;
-        const lead = Math.random() > 0.975;
-        ctx.fillStyle = lead ? "#d8ffb0" : "rgba(55,255,91," + (0.55 + Math.random() * 0.4) + ")";
+        const lead = Math.random() > 0.99;
+        ctx.fillStyle = lead ? "rgba(180,230,150,.7)" : "rgba(55,255,91," + (0.18 + Math.random() * 0.22) + ")";
         ctx.fillText(txt, x, y);
         if (y > h && Math.random() > 0.975) drops[i] = 0;
         drops[i] += 1;
