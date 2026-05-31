@@ -101,8 +101,9 @@ img{display:block;max-width:100%}
   padding:16px clamp(16px,4vw,48px);
   background:linear-gradient(180deg,rgba(6,8,6,.92),rgba(6,8,6,0));
   backdrop-filter:blur(2px)}
-.nav__brand{font-family:var(--pixel);font-size:18px;letter-spacing:1px;color:var(--text)}
-.nav__brand b{color:var(--lime)}
+.nav__brand{font-family:'Orbitron',var(--pixel),sans-serif;font-weight:900;font-size:19px;
+  letter-spacing:.14em;color:var(--text);text-shadow:0 0 12px rgba(55,255,91,.35)}
+.nav__brand b{color:var(--lime);font-weight:900}
 .nav__links{display:flex;gap:clamp(14px,2.4vw,34px)}
 .nav__links a,.nav__ig{font-size:12px;letter-spacing:2px;color:var(--muted);position:relative;padding:4px 0}
 .nav__links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--lime);transition:width .25s}
